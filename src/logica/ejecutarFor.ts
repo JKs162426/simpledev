@@ -6,3 +6,14 @@ export function ejecutarFor(limite: number): number[] {
   }
   return salida
 }
+
+// Explica en una frase cuántas vueltas dio el bucle con ese límite.
+export function resumenVueltas(limite: number): string {
+  if (limite === 0) {
+    return 'El bucle no dio ninguna vuelta: 0 no es menor que 0.'
+  }
+  if (limite === 1) {
+    return 'El bucle dio 1 vuelta: solo el 0.'
+  }
+  return `El bucle dio ${limite} vueltas: de 0 a ${limite - 1}.`
+}

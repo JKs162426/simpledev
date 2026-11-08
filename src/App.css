@@ -42,6 +42,63 @@
   margin-bottom: 8px;
 }
 
+/* El número del límite resaltado dentro del código. */
+.codigo-limite {
+  color: var(--acento-texto);
+  background: var(--acento);
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.limite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.limite-valor {
+  min-width: 7ch;
+  text-align: center;
+  font-family: var(--mono);
+}
+
+.boton-paso {
+  font: inherit;
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--acento);
+  border-radius: 8px;
+  color: var(--acento);
+  background: transparent;
+  cursor: pointer;
+}
+
+.boton-paso:hover:not(:disabled) {
+  background: var(--fondo-codigo);
+}
+
+.boton-paso:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+.boton-paso:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.resumen {
+  margin: 12px 0 0;
+}
+
 .boton {
   font: inherit;
   font-weight: 600;
