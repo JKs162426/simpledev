@@ -1,17 +1,26 @@
+/* Paleta "cuaderno y resaltador": papel cálido, tinta azul para las
+   acciones y tres marcadores, uno por cada parte del for. */
 :root {
-  --texto: #3d3a45;
-  --titulo: #0f0d14;
-  --fondo: #ffffff;
-  --borde: #e5e4e7;
-  --fondo-codigo: #f4f3ef;
-  --acento: #6d28d9;
+  --texto: #36333d;
+  --titulo: #16141b;
+  --fondo: #fbfaf6;
+  --borde: #e6e2d8;
+  --fondo-codigo: #f1eee5;
+  --acento: #1d4ed8;
   --acento-texto: #ffffff;
-  --consola-fondo: #14151a;
+  --consola-fondo: #17181d;
   --consola-texto: #d7f5dd;
   --correcto: #15803d;
   --incorrecto: #b91c1c;
 
+  /* Marcadores: siempre con tinta oscura encima, en claro y en oscuro. */
+  --tinta-marca: #16141b;
+  --marca-inicio: #fde68a;
+  --marca-condicion: #fbcfe8;
+  --marca-incremento: #bae6fd;
+
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --titulos: 'Bricolage Grotesque', var(--sans);
   --mono: ui-monospace, 'SF Mono', Consolas, monospace;
 
   font: 18px/1.6 var(--sans);
@@ -25,11 +34,11 @@
   :root {
     --texto: #c9cbd3;
     --titulo: #f3f4f6;
-    --fondo: #16171d;
-    --borde: #2e303a;
+    --fondo: #15161b;
+    --borde: #2d2f38;
     --fondo-codigo: #1f2028;
-    --acento: #a78bfa;
-    --acento-texto: #16171d;
+    --acento: #93b4ff;
+    --acento-texto: #10131c;
     --consola-fondo: #0b0c10;
     --correcto: #4ade80;
     --incorrecto: #f87171;
@@ -38,10 +47,13 @@
 
 body {
   margin: 0;
+  background: var(--fondo);
 }
 
 h1,
-h2 {
+h2,
+h3 {
+  font-family: var(--titulos);
   color: var(--titulo);
   line-height: 1.2;
 }

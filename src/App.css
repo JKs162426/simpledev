@@ -1,22 +1,69 @@
+/* Espaciado en múltiplos de 8px. Ancho de unas 70 letras por línea. */
 .pagina {
-  max-width: 720px;
+  max-width: 38rem;
   margin: 0 auto;
-  padding: 48px 16px 64px;
+  padding: 64px 16px 80px;
 }
 
-.pagina h1 {
-  font-size: 2.5rem;
+/* ---------- Cabecera ---------- */
+
+.cabecera h1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(2.25rem, 8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+/* El logo son las llaves { } en un cuadro de tinta azul, igual que el favicon. */
+.logo {
+  display: inline-grid;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  color: var(--acento-texto);
+  background: var(--acento);
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.entradilla {
+  font-size: 1.2rem;
+  color: var(--titulo);
   margin: 0 0 8px;
 }
 
+.nota {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ---------- Secciones ---------- */
+
 .seccion {
-  margin-top: 40px;
-  padding-top: 32px;
+  margin-top: 56px;
+  padding-top: 40px;
   border-top: 1px solid var(--borde);
 }
 
+.etiqueta-paso {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+
 .seccion h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
   margin: 0 0 8px;
 }
 
@@ -29,6 +76,7 @@
   background: var(--fondo-codigo);
   border-radius: 8px;
   padding: 16px;
+  margin: 16px 0;
   overflow-x: auto;
 }
 
@@ -38,17 +86,81 @@
   font-size: 1rem;
 }
 
-.partes li {
-  margin-bottom: 8px;
+/* En teléfonos pequeños, la primera línea del for cabe completa. */
+@media (max-width: 400px) {
+  .codigo {
+    padding: 16px 12px;
+  }
+
+  .codigo code {
+    font-size: 0.85rem;
+  }
 }
 
-/* El número del límite resaltado dentro del código. */
-.codigo-limite {
+.partes li {
+  margin-bottom: 12px;
+}
+
+/* ---------- Marcadores: un color por cada parte del for ---------- */
+
+.marca {
+  color: var(--tinta-marca);
+  border-radius: 4px;
+  padding: 1px 4px;
+}
+
+.marca-inicio {
+  background: var(--marca-inicio);
+}
+
+.marca-condicion {
+  background: var(--marca-condicion);
+}
+
+.marca-incremento {
+  background: var(--marca-incremento);
+}
+
+/* ---------- Botones ---------- */
+
+.boton,
+.boton-paso,
+.opcion {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    filter 150ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boton,
+  .boton-paso,
+  .opcion {
+    transition: none;
+  }
+}
+
+.boton {
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
   color: var(--acento-texto);
   background: var(--acento);
-  border-radius: 4px;
-  padding: 0 4px;
+  cursor: pointer;
 }
+
+.boton:hover {
+  filter: brightness(1.1);
+}
+
+.boton:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+}
+
+/* ---------- Ejemplo editable ---------- */
 
 .controles {
   display: flex;
@@ -95,19 +207,42 @@
   cursor: not-allowed;
 }
 
+.consola {
+  margin-top: 16px;
+  min-height: 120px;
+  padding: 16px;
+  border-radius: 8px;
+  color: var(--consola-texto);
+  background: var(--consola-fondo);
+  font-family: var(--mono);
+}
+
+.consola-titulo {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.consola-vacia {
+  opacity: 0.6;
+}
+
 .resumen {
   margin: 12px 0 0;
 }
 
-/* Mini quiz */
+/* ---------- Mini quiz ---------- */
+
 .pregunta {
   margin-top: 32px;
 }
 
 .pregunta h3 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.3;
-  color: var(--titulo);
   margin: 0 0 8px;
 }
 
@@ -184,47 +319,4 @@
 .feedback.incorrecta {
   border-color: var(--incorrecto);
   background: color-mix(in srgb, var(--incorrecto) 8%, transparent);
-}
-
-.boton {
-  font: inherit;
-  font-weight: 600;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 8px;
-  color: var(--acento-texto);
-  background: var(--acento);
-  cursor: pointer;
-}
-
-.boton:hover {
-  filter: brightness(1.1);
-}
-
-.boton:focus-visible {
-  outline: 3px solid var(--acento);
-  outline-offset: 3px;
-}
-
-.consola {
-  margin-top: 16px;
-  min-height: 120px;
-  padding: 16px;
-  border-radius: 8px;
-  color: var(--consola-texto);
-  background: var(--consola-fondo);
-  font-family: var(--mono);
-}
-
-.consola-titulo {
-  display: block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.6;
-  margin-bottom: 8px;
-}
-
-.consola-vacia {
-  opacity: 0.6;
 }

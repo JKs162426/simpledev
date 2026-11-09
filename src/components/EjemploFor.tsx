@@ -21,17 +21,18 @@ export default function EjemploFor() {
 
   return (
     <section className="seccion">
-      <h2>Pruébalo</h2>
+      <p className="etiqueta-paso">Paso 2 · Prueba</p>
+      <h2>Pruébalo tú</h2>
       <p>
-        Presiona <strong>Ejecutar</strong> o cambia el límite con los botones −
-        y +. La consola se actualiza al instante. ¿Qué crees que muestra si
-        cambias el 3 por un 5?
+        Presiona <strong>Ejecutar</strong> para correr el código. Después
+        cambia el límite con los botones − y +: la consola se actualiza sola.
+        ¿Qué crees que pasa si cambias el 3 por un 5?
       </p>
 
       <pre className="codigo">
         <code>
           {'for (let i = 0; i < '}
-          <span className="codigo-limite">{limite}</span>
+          <span className="marca marca-condicion">{limite}</span>
           {'; i++) {\n  console.log(i)\n}'}
         </code>
       </pre>
