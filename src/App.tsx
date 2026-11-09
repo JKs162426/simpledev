@@ -1,5 +1,6 @@
 import ExplicacionFor from './components/ExplicacionFor.tsx'
 import EjemploFor from './components/EjemploFor.tsx'
+import Quiz from './components/Quiz.tsx'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
 
       <ExplicacionFor />
       <EjemploFor />
+      <Quiz />
     </main>
   )
 }

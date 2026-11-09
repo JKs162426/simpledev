@@ -8,6 +8,8 @@
   --acento-texto: #ffffff;
   --consola-fondo: #14151a;
   --consola-texto: #d7f5dd;
+  --correcto: #15803d;
+  --incorrecto: #b91c1c;
 
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, 'SF Mono', Consolas, monospace;
@@ -29,6 +31,8 @@
     --acento: #a78bfa;
     --acento-texto: #16171d;
     --consola-fondo: #0b0c10;
+    --correcto: #4ade80;
+    --incorrecto: #f87171;
   }
 }
 
