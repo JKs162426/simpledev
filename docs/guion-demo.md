@@ -53,21 +53,27 @@ Los tiempos son aproximados. Lo que va entre comillas es lo que dices; lo que va
 
 > "Y si el límite es 0, el bucle no da ninguna vuelta, porque 0 no es menor que 0. Ese es un caso que confunde mucho al empezar."
 
-### 1:40 – 2:30 · Paso 3 · Comprueba
+### 1:40 – 2:40 · Paso 3 · Comprueba
 
 *Baja hasta "Mini quiz".*
 
-> "Al final hay un mini quiz de tres preguntas. No hay puntos: es para practicar."
+> "Al final hay un mini quiz de tres preguntas, y al terminar te dice tu resultado."
 
 *En la pregunta 1, elige a propósito la respuesta incorrecta **1, 2, 3**.*
 
 > "Si me equivoco, me marca en rojo mi respuesta, en verde la correcta, y me explica por qué: el contador empieza en 0 y el 3 nunca se muestra."
 
+*En la pregunta 2, elige **5 veces** sin detenerte mucho.*
+
 *En la pregunta 3, elige **Muestra 0 una y otra vez, y nunca termina**.*
 
 > "La última pregunta enseña qué pasa si se te olvida el `i++`: el bucle nunca termina. A eso se le llama bucle infinito."
 
-### 2:30 – 2:50 · Cierre
+*Aparece el bloque "Resultado: 2 de 3 correctas".*
+
+> "Como respondí las tres, me muestra mi resultado: 2 de 3, y me sugiere repasar la que fallé. Con 'Volver a intentar' el quiz empieza de nuevo, sin tocar el ejemplo de arriba."
+
+### 2:40 – 3:00 · Cierre
 
 *Sube al inicio de la página.*
 
