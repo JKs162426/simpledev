@@ -320,3 +320,25 @@
   border-color: var(--incorrecto);
   background: color-mix(in srgb, var(--incorrecto) 8%, transparent);
 }
+
+/* ---------- Resultado del quiz ---------- */
+
+.resultado-quiz {
+  margin-top: 32px;
+  padding: 16px 20px;
+  border: 2px solid var(--borde);
+  border-radius: 8px;
+}
+
+.resultado-quiz p {
+  margin: 0 0 12px;
+}
+
+.resultado-titulo {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.seccion h2[tabindex='-1']:focus {
+  outline: none;
+}

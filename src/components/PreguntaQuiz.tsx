@@ -4,9 +4,11 @@ import type { Pregunta } from '../datos/preguntasQuiz.ts'
 type Props = {
   numero: number
   pregunta: Pregunta
+  // Avisa al quiz si la primera respuesta fue correcta.
+  onResponder: (acerto: boolean) => void
 }
 
-export default function PreguntaQuiz({ numero, pregunta }: Props) {
+export default function PreguntaQuiz({ numero, pregunta, onResponder }: Props) {
   // null = todavía no responde. Si no, guarda la posición de la opción elegida.
   const [elegida, setElegida] = useState<number | null>(null)
   const idTitulo = useId()
@@ -19,6 +21,7 @@ export default function PreguntaQuiz({ numero, pregunta }: Props) {
     // Solo cuenta la primera respuesta.
     if (respondida) return
     setElegida(indice)
+    onResponder(indice === pregunta.correcta)
   }
 
   // Después de responder: la correcta se marca en verde y la elegida
